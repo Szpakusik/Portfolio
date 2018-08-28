@@ -43,8 +43,9 @@ h1.page-title:after {
 	background-color: #f2f2f2;
 	margin: 0;
 	margin-bottom: 15px;
-	/*display: none;*/
+	display: none;
 }
+
 .clearfix{
 	margin-bottom: 0px!important;
 }
@@ -143,9 +144,6 @@ color: #999;
 .multiple-team-section{
 	text-align: center;
 }
-.page-description>.head-text{
-	
-}
 
 /* Thumbnails styles*/
 
@@ -188,3 +186,168 @@ display: inline-block;
  .position{
  	display: none!important;
  }
+
+ /* Flip Card */
+.flip-container{
+	margin: 20px 0;
+}
+
+ .flip-card{
+	width: 18%;
+	height: 300px;
+	border-radius: 6px;
+	background-color: black;
+	position: relative;
+	perspective: 450px;
+	background: transparent;
+	margin: 1%; 
+	float: left;
+}	
+@media only screen and (max-width: 980px) {
+    .flip-card {
+        width: 23%;
+        margin: 1%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .flip-card {
+        width: 29%;
+        margin: 2%;
+    }
+}
+@media screen and (max-width: 479px) {
+    .flip-card {
+        width: 96%;
+        margin: 2%;
+    }
+}
+
+.flip-card::before,
+.flip-card::after{
+	content: '';
+	width:100%;
+	height: 100%;
+	position: absolute;
+	background: white;
+	border-radius: 6px;
+	box-sizing: border-box;
+	border: 3px solid #171212;
+	transition: 0.2s transform linear;
+	backface-visibility: hidden;
+
+}
+.flip-card::after{
+	background-color: #261F1F;
+}
+.flip-card:hover::after{
+	transform: rotateY(180deg);
+}
+.flip-card:before{
+	background-image: url(../img/hex.png);
+	background-size: contain;
+	transform: rotateY(180deg);
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.flip-card:hover::before{
+	transform: rotate(360deg);
+}
+.not-visible{
+	visibility: hidden;
+}
+.php::after{
+	background: url("../img/php.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.php::before{
+	content: "\a Pasja Informatyki(pl) \a Kurs PHP \a 420 min \a\a LearnWebCode(en) \a Kurs Wordpress \a 330 min \a\aStrona na Wordpressie portfolio  \a \a CodinGame (SzpaQ) \a Zadania Średnie - 1 \a";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.html::after{
+	 background: url("../img/html.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.html::before{
+	content: '\a\a\a\a Pasja Informatyki(pl)\a Kurs HTML\a 370 min\a\a Strona w czystym html i css \a 700 podstron\a';
+}
+.css::after{
+	background: url("../img/css3.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.css::before{
+content: '\a\a Pasja Informatyki (pl) \a Kurs CSS \a 270 min \a\a Derek Banas (en)\aKurs RW in One Video\a 30 min\a\aStrona w czystym html i css \a 700 podstron\a' attr(title);	
+}
+.js::after{
+	background: url("../img/js.png") #f0db4f no-repeat center center;
+	background-size: contain;
+}
+.js::before{
+	content: "\a\a\a\a\a Pasja Informatyki(pl) \a Kurs JS \a 270 min";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.sql::after{
+	background: url("../img/sql.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.sql::before{
+	content: "\a\a\a\a\a Pasja Informatyki(pl) \a Kurs MySQL \a 180 min";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.cpp::after{
+	background: url("../img/cpp.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.cpp::before{
+	content: "\a Pasja Informatyki(pl) \a Kurs C++ \a 480 min \a \a Pasja Informatyki(pl) \a Kurs Podejcia Obiektowego \a 380 min \a \a Polski Spoj (Szpakusik) \a Zadania Łatwe - 15 \a \a CodinGame (SzpaQ) \a Zadania Średnie - 1";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.java::after{
+	background: url("../img/java.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.java::before{
+	content: "\a Derek Banas(en) \a Kurs Java in One Video \a 30 min \a \aPolski Spoj (Szpakusik) \a Zadania Łatwe - 1 \a \a CodinGame (SzpaQ) \a Zadania Łatwe - 5 \a \a CodinGame (SzpaQ) \a Zadania Średnie - 1";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.json::after{
+	background: url("../img/jsonajax.png") #000 no-repeat center center;
+	background-size: contain;
+}
+.json::before{
+	content: "\a\a\a\a\a Derek Banas(en) \a Kurs JSON & AJAX in One Video \a 40 min";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+.bootstrap::after{
+	background: url("../img/bootstrap.png") #fff no-repeat center center;
+	background-size: contain;
+}
+.bootstrap::before{
+	content: "\a\a\a\a\a Derek Banas(en) \a Kurs JSON & AJAX in One Video \a 40 min";
+	color: #666666;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
