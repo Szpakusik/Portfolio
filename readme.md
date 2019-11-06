@@ -1,2 +1,2 @@
-**szpakowski-portfolio
+## szpakowski-portfolio
 Projekt porzucony.
